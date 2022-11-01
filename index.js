@@ -1,15 +1,17 @@
 class Statistieken {
     constructor() {
         this.array = [];
-        for (let x = 0; x < JSON.parse(localStorage.bedrag).length; x++) {
-            const newDiv = document.createElement("h2");
-            newDiv.innerHTML = `
-            ${JSON.parse(localStorage.getItem('verzender'))[x]} heeft ${JSON.parse(localStorage.getItem('bedrag'))[x]} overgemaakt naar ${JSON.parse(localStorage.getItem('ontvanger'))[x]}
+        this.verzender = JSON.parse(localStorage.getItem('verzender'));
+        this.bedrag = JSON.parse(localStorage.getItem('bedrag'));
+        this.ontvanger = JSON.parse(localStorage.getItem('ontvanger'));
+        for (let x = JSON.parse(localStorage.bedrag).length - 1; x >= 0; x--) {
+            const newTransaction = document.createElement("h4");
+            newTransaction.innerHTML = `
+            ${this.verzender[x]} sent ${this.bedrag[x]} bits to ${this.ontvanger[x]}
             `;
-            document.body.appendChild(newDiv);
+            document.body.appendChild(newTransaction);
 
-            const bedrag = JSON.parse(localStorage.getItem('bedrag'))[x];
-            this.array.push(parseInt(bedrag));
+            this.array.push(parseInt(this.bedrag[x]));
         }
     }
     berekenGemiddelde() {

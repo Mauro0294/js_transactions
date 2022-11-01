@@ -9,14 +9,17 @@
         <h2>Maak een transactie</h2>
         <a href="index.html">Ga naar overzicht</a>
         <form>
-            <label for="bedrag">Bedrag</label>
-            <input type="number" name="bedrag" id="bedrag" required>
             <label for="verzender">Verzender</label>
             <input type="text" name="verzender" id="verzender" required>
+            <label for="bedrag">Bedrag</label>
+            <input type="number" name="bedrag" id="bedrag" required>
             <label for="ontvanger">Ontvanger</label>
             <input type="text" name="ontvanger" id="ontvanger">
+            <label for="ontvanger">Transactie id</label>
+            <input type="text" name="ontvanger" id="transactieid" readonly>
             <input type="button" value="Verzenden" id="submit" required>
         </form>
-        <script type="module" src="add-transaction.js"></script>
+        <h4 class="message"></h4>
+        <script src="transaction.js"></script>
     </body>
 </html>
