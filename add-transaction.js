@@ -1,13 +1,9 @@
-class addTransactie {
+class AddTransactie {
     constructor() {
         this.submitBtn = document.querySelector("#submit");
     }
     transactieUitvoeren() {
         this.submitBtn.addEventListener("click", () => {
-            this.bedragValue = document.querySelector("#bedrag").value;
-            this.verzenderValue = document.querySelector("#verzender").value;
-            this.ontvangerValue = document.querySelector("#ontvanger").value;
-
             this.bedrag = document.querySelector("#bedrag").value;
             this.verzender = document.querySelector("#verzender").value;
             this.ontvanger = document.querySelector("#ontvanger").value;
@@ -56,5 +52,5 @@ class addTransactie {
     }
 }
 
-const transactie = new addTransactie();
+const transactie = new AddTransactie();
 transactie.transactieUitvoeren();
