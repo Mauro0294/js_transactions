@@ -1,4 +1,4 @@
-class AddTransactie {
+class Transactie {
     constructor() {
         this.submitBtn = document.querySelector("#submit");
     }
@@ -52,5 +52,5 @@ class AddTransactie {
     }
 }
 
-const transactie = new AddTransactie();
+const transactie = new Transactie();
 transactie.transactieUitvoeren();
