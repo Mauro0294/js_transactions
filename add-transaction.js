@@ -26,33 +26,33 @@ class addTransactie {
             localStorage.setItem("verzender", JSON.stringify([]));
         }
 
-        this.oldDataVerzender = JSON.parse(localStorage.getItem('verzender'));
-        this.newDataVerzender = this.verzender;
+        const oldDataVerzender = JSON.parse(localStorage.getItem('verzender'));
+        const newDataVerzender = this.verzender;
 
-        this.oldDataVerzender.push(this.newDataVerzender);
-        localStorage.setItem('verzender', JSON.stringify(this.oldDataVerzender));
+        oldDataVerzender.push(newDataVerzender);
+        localStorage.setItem('verzender', JSON.stringify(oldDataVerzender));
     }
     transactieBedrag() {
         if (localStorage.getItem("bedrag") === null) {
             localStorage.setItem("bedrag", JSON.stringify([]));
         }
 
-        this.oldDataBedrag = JSON.parse(localStorage.getItem('bedrag'));
-        this.newDataBedrag = this.bedrag;
+        const oldDataBedrag = JSON.parse(localStorage.getItem('bedrag'));
+        const newDataBedrag = this.bedrag;
 
-        this.oldDataBedrag.push(this.newDataBedrag);
-        localStorage.setItem('bedrag', JSON.stringify(this.oldDataBedrag));
+        oldDataBedrag.push(newDataBedrag);
+        localStorage.setItem('bedrag', JSON.stringify(oldDataBedrag));
     }
     transactieOntvanger() {
         if (localStorage.getItem("ontvanger") === null) {
             localStorage.setItem("ontvanger", JSON.stringify([]));
         }
 
-        this.oldDataOntvanger = JSON.parse(localStorage.getItem('ontvanger'));
-        this.newDataOntvanger = this.ontvanger;
+        const oldDataOntvanger = JSON.parse(localStorage.getItem('ontvanger'));
+        const newDataOntvanger = this.ontvanger;
 
-        this.oldDataOntvanger.push(this.newDataOntvanger);
-        localStorage.setItem('ontvanger', JSON.stringify(this.oldDataOntvanger));
+        oldDataOntvanger.push(newDataOntvanger);
+        localStorage.setItem('ontvanger', JSON.stringify(oldDataOntvanger));
     }
 }
 
