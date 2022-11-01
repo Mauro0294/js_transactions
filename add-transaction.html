@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transactie uitvoeren</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h2>Maak een transactie</h2>
+        <a href="index.html">Ga naar overzicht</a>
+        <form>
+            <label for="bedrag">Bedrag</label>
+            <input type="number" name="bedrag" id="bedrag" required>
+            <label for="verzender">Verzender</label>
+            <input type="text" name="verzender" id="verzender" required>
+            <label for="ontvanger">Ontvanger</label>
+            <input type="text" name="ontvanger" id="ontvanger">
+            <input type="button" value="Verzenden" id="submit" required>
+        </form>
+        <script type="module" src="add-transaction.js"></script>
+    </body>
+</html>
